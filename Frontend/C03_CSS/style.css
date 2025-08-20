@@ -1,0 +1,331 @@
+/* Ejercicio 1: Aplicar color de fondo del cuerpo (body) y colores de texto */
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Primera opcion Arial, sino aplica la */
+}
+
+/* Ejercicio 1: Aplicar color de texto del título <h1> */
+h1 {
+    color: #2c3e50;
+    font-family: Arial, sans-serif; /* Ejercicio 2: Cambiar fuente a Arial */
+    margin-top: 20px; /* Ejercicio 3: Aumentar margen superior a 20px */
+}
+
+/* Ejercicio 1: Aplicar colores a los párrafos */
+p {
+    color: #34495e;
+    font-size: 18px; /* Ejercicio 2: Cambiar tamaño de fuente a 18px */
+}
+
+/* Ejercicio 2 Plus: Usar fuente de Google Fonts en algunos párrafos */
+h1 {
+    font-family: 'Sofia', cursive; /* Usando la fuente Sofia que ya está importada */
+}
+
+/* Ejercicio 3: Aplicar borde sólido y padding a párrafos específicos */
+p:nth-child(4), p:nth-child(5) { /* Párrafos 4 y 5 del html */
+    border: 1px solid #bdc3c7;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+/* Ejercicio 4: Estilos en botón */
+button {
+    background-color: #28a745; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    border-radius: 5px; /* Bordes redondeados de 5px */
+    padding: 10px; /* Padding 10px */
+    width: 100px; /* Ancho del botón 100px */
+    margin: 10px 0; /* Margen superior e inferior 10px */
+    border: none; /* Quitar color del borde */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Ejercicio 5: Inputs del formulario */
+input, textarea {
+    padding: 5px; /* Agregar padding de 5px */
+    border: none; /* Quitar bordes */
+    margin: 5px 0; /* Márgenes superiores e inferiores de 5px */
+    background-color: #ecf0f1;
+    border-radius: 3px;
+}
+
+/* Ejercicio 5 Plus: Aplicar tipo de fuente para labels */
+label {
+    font-family: 'Sofia', cursive;
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Ejercicio 5 Plus: Aplicar width y height al textarea */
+textarea {
+    width: 300px;
+    height: 100px;
+    resize: vertical; /* resize: permite al usuario cambiar tamaño vertical de la caja de texto */
+}
+
+/* Ejercicio 6: Footer */
+footer {
+    background-color: #2c3e50; /* Color de fondo */
+    color: white; /* Cambiar color del texto */
+    padding: 20px; /* Padding de 20px */
+    text-align: center; /* Alinear texto al centro */
+    margin-top: 50px;
+}
+
+/* Ejercicio 7: Header - Aplicando estilos al h1 como header principal */
+body > h1:first-child {  /* h1 es hijo directo de body (no esta dentro de otro contenedor), first-child hace ref al primer hijo */
+    background-color: #3486bd; /* Color de fondo */
+    color: white; /* Color de texto */
+    text-shadow: #34495e 1px 1px 2px;
+    padding: 50px; /* Padding de 50px */
+    text-align: center; /* Alinear texto al centro */
+    margin: 0;
+}
+
+/* Ejercicio 8: Nav menu */
+nav {
+    background-color: #34495e; /* Color de fondo */
+    color: white; /* Color de texto */
+    padding: 10px 0;
+}
+
+/* Eliminar bullets de la ul */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Agregar padding y display inline-block a cada li */
+nav li {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Ejercicio 8 Plus: Ocultar submenu */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c3e50;
+    min-width: 150px;
+}
+
+/* Mostrar submenu al hacer hover */
+nav li:hover ul {
+    display: block;
+}
+
+nav ul ul li {
+    display: block;
+    width: 100%;
+}
+
+/* Estilos para enlaces fuera del nav */
+a:not(nav a) {
+    color: #3498db;
+    text-decoration: none;
+    margin-right: 15px;
+    padding: 5px 10px;
+    border: 1px solid #3498db;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+a:not(nav a):hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Estilos para las listas ordenadas y no ordenadas */
+ol, ul:not(nav ul) {
+    padding-left: 30px;
+    margin: 15px 0;
+}
+
+ol li, ul:not(nav ul) li {
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+/* Estilos para las imágenes y sus contenedores */
+div:has(img) {
+    background-color: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* div:has(img) → selecciona cualquier <div> que contenga al menos una imagen (<img>) */
+div:has(img) h2 { 
+    color: #e67e22;
+    margin: 10px 0;
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilos para los formularios */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+/* Estilos para los divs con inputs adicionales */
+div:has(input[type="email"]), div:has(input[type="tel"]) {
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Ejercicio 9: Media queries para diseño responsive */
+@media screen and (min-width: 768px) {
+    body {
+        background-color: #e8f4f8; /* Color diferente para tablets */
+    }
+    
+    /* Contenedor centrado para pantallas medianas */
+    body > * {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    body > h1:first-child {
+        max-width: none; /* El header ocupa todo el ancho */
+        margin: 0;
+    }
+    
+    nav {
+        max-width: none; /* El nav ocupa todo el ancho */
+    }
+    
+    footer {
+        max-width: none; /* El footer ocupa todo el ancho */
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    body {
+        background-color: #f0f8e8; /* Color diferente para escritorio */
+    }
+    
+    /* Contenedor más amplio para pantallas grandes */
+    body > * {
+        max-width: 1200px;
+    }
+    
+    body > h1:first-child {
+        max-width: none;
+        font-size: 2.5em;
+    }
+    
+    nav {
+        max-width: none;
+    }
+    
+    footer {
+        max-width: none;
+    }
+}
+
+
+
+/* Ejercicios CSS <3
+    
+Documentación CSS en: https://www.w3schools.com/css/default.asp
+Documentación Fonts: https://www.w3schools.com/css/css_font_google.asp 
+Práctica y ejercicios online: https://www.w3schools.com/css/exercise.asp
+
+
+Ejercicio 1: 
+Aplicar color de fondo del cuerpo (body).
+Aplicar color de texto del título <h1>.
+Aplicar colores a los párrafos.
+
+
+Ejercicio 2: Estilos de fuentes
+Cambiar la fuente del título <h1> a Arial.
+Cambiar el tamaño de la fuente del párrafo a 18px.
+Plus: Agregar otra fuente de https://fonts.google.com/ y usarla en algún párrafo.
+
+
+Ejercicio 3: Bordes y márgenes
+Aplicar un borde sólido de 1px de color claro a un párrafo (<p>).
+Aumentar el margen superior del título <h1> a 20px.
+Agregar un padding de 10px alrededor del contenido del párrafo.
+
+
+Ejercicio 4: Estilos en botón
+Cambiar el color de fondo del botón a verde (#28a745) y el color del texto a blanco.
+Agregar bordes redondeados (border-radius) de 5px.
+Agregar padding 10px.
+Aplicar ancho del botón a 100px.
+Establecer margen superior e inferior de 10px.
+Quitar el color del borde del botón.
+
+
+Ejercicio 5: Inputs del formulario
+Agregar padding de 5px.
+Quitar bordes.
+Agregar márgenes superiores e inferiores de 5px entre cada control
+Plus: Aplicar un tipo de fuente para los labels de cada control.
+Plus: Aplicar width y height al textarea. Ejemplo: 300px ancho y 100px alto.
+
+
+Ejercicio 6: Footer
+Aplicar color de fondo.
+Cambiar color del texto del footer.
+Agregar padding de 20px.
+Alinear texto al centro.
+
+
+Ejercicio 7: Header
+Crear etiqueta header con un texto.
+Aplicar color de fondo y color de texto.
+Agregar padding de 50px.
+Alinear textos al centro.
+
+
+Ejercicio 8: Nav menu
+Aplicar color de fondo a la etiqueta nav y color de texto.
+Eliminar las bullets de la <ul> con: list-style: none;
+En cada item <li>, agregar padding 10px y aplicar display: inline-block; para mostrar los elementos en línea.
+Plus: Ocultar el submenu (ul dentro del li) con display: none;
+
+
+Ejercicio 9: Diseño responsive - Media queries
+Agregar media queries para que el color de fondo del body tenga un color diferente en distintas pantallas. 
+Ejemplos: @media screen and (min-width: 768px) {}
+@media screen and (min-width: 1280px) {}
+ */

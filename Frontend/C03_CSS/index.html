@@ -1,0 +1,142 @@
+<!-- Ejercicios <3
+
+1) Agregar un heading nivel 2, y 2 parrafos.
+2) Crear una ordered list con 3 items.
+3) Crear una unordered list con 3 items.
+4) Crear 2 <div>, dentro de cada div: agregar una imagen, un h2 para mostrar un titulo para esa imagen y un <p> con breve descripcion.
+5) Crear 3 enlaces/links apuntando a sitios diferentes.
+6) Crear menú de navegación <nav> usando una unordered list <ul> que contenga 3 items con links cada uno.
+7) Crear un form con un input tipo texto, que tenga placeholder Buscar y un botón que diga Buscar. 
+8) Agregar al form, un input tipo texto para Nombre.
+9) Agregar al form, un textarea para Descripción.
+10) Crear footer que contenga el siguiente párrafo: &copy; 2024 Fullstack.
+11) Plus: agregar placeholders en los inputs y textarea
+12) Plus: agregar labels y ids para input y textarea.
+13) Plus: agregar 3 items más, dentro de un item de la <nav>, usando <ul> y <li>
+14) Plus: agregar 2 inputs más con labels y ids que elijan. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullstack 2025</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+
+    <!-- Link a hoja de CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <h1>Formación FullStack <3</h1>
+    <p>Hola!</p>
+
+    <!-- 0 -->
+    <h2>Heading nivel 2</h2>
+    <p>Este es un párrafo debajo del heading nivel 2.</p>
+    <p>Este es otro párrafo debajo del heading nivel 2.</p>
+
+    <!-- 1 -->
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+    <!-- 2 -->
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <!-- 3 -->
+    <div>
+      <img src="./assets/img/Ascii Art Compi Dribb.jpeg" width="200" alt="pc pixelart" />
+      <h2>Título de Imagen 1</h2>
+      <p>Descripción de la Imagen 1</p>
+    </div>
+    <!-- 4 -->
+    <div>
+      <img src="./assets/img/aesthetic.jpeg" width="200" alt="teclado" />
+      <h2>Título de Imagen 2</h2>
+      <p>Descripción de la Imagen 2</p>
+    </div>
+    <!-- 5 -->
+    <a href="">enlace1</a>
+    <a href="">enlace2</a>
+    <a href="">enlace3</a>
+    <!-- 6 -->
+    <nav>
+      <ul>
+        <!-- Item principal con sublistas -->
+        <li>
+          Enlace 1
+          <ul>
+            <li>Subitem 1</li>
+            <li>Subitem 2</li>
+            <li>Subitem 3</li>
+            <!-- 3 ítems agregados que aparecen al hacer hover en enlace 1-->
+          </ul>
+        </li>
+
+        <!-- Otros items de la navegación -->
+        <li><a href="#">Enlace 2</a></li>
+        <li><a href="#">Enlace 3</a></li>
+      </ul>
+    </nav>
+
+    <!-- 7 -->
+    <form>
+      <!-- Input de búsqueda -->
+      <input type="text" placeholder="Buscar" label="Buscar" />
+
+      <!-- Botón de búsqueda -->
+      <button type="submit">Buscar</button>
+
+      <br /><br />
+
+      <!-- 8 Input para nombre -->
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+
+      <br /><br />
+
+      <!-- 9 Textarea para descripción -->
+      <label for="descripcion">Descripción:</label>
+      <textarea
+        id="descripcion"
+        name="descripcion"
+        placeholder="Descripción"
+      ></textarea>
+    </form>
+
+    <!-- 14 -->
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email" />
+    </div>
+    <div>
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" />
+    </div>
+
+    <!-- 10 -->
+    <footer>
+      <p>&copy; 2024 Fullstack.</p>
+    </footer>
+
+    <!--
+
+Más práctica y ejercicios online en: https://www.w3schools.com/html/html_exercises.asp
+    
+Documentación: 
+  https://www.w3schools.com/html/html_intro.asp
+  https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML
+
+
+-->
+  </body>
+</html>
