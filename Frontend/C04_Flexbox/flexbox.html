@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de Flexbox y Media Queries</title>
+    <style>
+      /* Estilos */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        display: flex;
+        gap: 10px;
+        background-color: lightgray;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+      }
+
+      .item {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* Media queries */
+      @media (min-width: 600px) {
+        .container {
+          background-color: lightblue;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .container {
+          background-color: lightcoral;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Ejercicios de Flexbox y Media queries</h2>
+    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+      >Guía y documentación</a
+    >
+    <br />
+    <a href="https://flexboxfroggy.com/#es">FlexboxFroggy</a>
+
+    <!-- Ejercicio 1: Filas por defecto -->
+    <section>
+      <h3>Ejercicio 1: Flexbox en fila (default)</h3>
+      <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 2: Columna -->
+    <section>
+      <h3>Ejercicio 2: Flexbox en columna</h3>
+      <style>
+        /* EJERCICIO 2: Cambiar dirección a columna */
+        .container-columna {
+          flex-direction: column;
+        }
+      </style>
+      <div class="container container-columna">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 3: Columna inversa -->
+    <section>
+      <h3>Ejercicio 3: Columna inversa</h3>
+      <style>
+        /* EJERCICIO 3: Columna inversa - elementos apilados verticalmente en orden inverso */
+        .container-columna-inversa {
+          flex-direction: column-reverse;
+        }
+      </style>
+      <div class="container container-columna-inversa">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 4: Fila inversa -->
+    <section>
+      <h3>Ejercicio 4: Fila inversa</h3>
+      <style>
+        /* EJERCICIO 4: Fila inversa - elementos horizontales en orden inverso */
+        .container-fila-inversa {
+          flex-direction: row-reverse;
+        }
+      </style>
+      <div class="container container-fila-inversa">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 5: Cambia flex-direction en dispositivos grandes -->
+    <section>
+      <h3>Ejercicio 5: Flex-direction cambia en pantallas grandes</h3>
+      <style>
+        /* EJERCICIO 5: En móvil columna, en pantallas grandes (768px+) fila */
+        .container-large {
+          flex-direction: column;
+        }
+        
+        @media (min-width: 768px) {
+          .container-large {
+            flex-direction: row;
+          }
+        }
+      </style>
+      <div class="container container-large">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 6: Cambia flex-direction en pantallas pequeñas -->
+    <section>
+      <h3>Ejercicio 6: Flex-direction cambia en pantallas pequeñas</h3>
+      <style>
+        /* EJERCICIO 6: En desktop fila, en pantallas pequeñas (500px-) columna */
+        .container-small {
+          flex-direction: row;
+        }
+        
+        @media (max-width: 500px) {
+          .container-small {
+            flex-direction: column;
+          }
+        }
+      </style>
+      <div class="container container-small">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 7: Justificar contenido centrado -->
+    <section>
+      <h3>Ejercicio 7: Centrado vertical en columna</h3>
+      <style>
+        /* EJERCICIO 7: Cambiar a columna y centrar verticalmente */
+        .container-centrado {
+          flex-direction: column;
+          justify-content: center;
+        }
+      </style>
+      <div class="container container-centrado" style="height: 200px">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 8: Distribuir espacio uniformemente -->
+    <section>
+      <h3>Ejercicio 8: Distribuir espacio con 'space-around'</h3>
+      <style>
+        /* EJERCICIO 8: Espacio igual alrededor de cada elemento */
+        .container-space-around {
+          justify-content: space-around;
+        }
+      </style>
+      <div class="container container-space-around">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 9: Distribuir espacio entre items -->
+    <section>
+      <h3>Ejercicio 9: Distribuir espacio con 'space-between'</h3>
+      <style>
+        /* EJERCICIO 9: Espacio igual entre elementos, sin espacio en extremos */
+        .container-space-between {
+          justify-content: space-between;
+        }
+      </style>
+      <div class="container container-space-between">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 10: Flex en pantallas pequeñas y grandes -->
+    <section>
+      <h3>
+        Ejercicio 10: Cambiar en pantallas pequeñas y grandes: flex-direction,
+        justify-content y align-items. Nota: se puede agregar height al
+        contenedor (ej: 400px) para notar los cambios.
+      </h3>
+      <style>
+        /* EJERCICIO 10: Cambios responsive múltiples */
+        .container-responsive {
+          height: 400px;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: stretch;
+        }
+        
+        @media (max-width: 400px) {
+          .container-responsive {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        @media (min-width: 1000px) {
+          .container-responsive {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+          }
+        }
+      </style>
+      <div class="container container-responsive">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <h2>Ejercicios de Media Queries</h2>
+
+    <!-- Ejercicio 11: Cambiar color de fondo en pantallas grandes -->
+    <section>
+      <h3>Ejercicio 11: Cambia el color de fondo en pantallas grandes</h3>
+      <style>
+        /* EJERCICIO 11: Color diferente en pantallas mayores a 800px */
+        @media (min-width: 800px) {
+          .container-bg-large {
+            background-color: lightgreen;
+          }
+        }
+      </style>
+      <div class="container container-bg-large">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 12: Cambiar tamaño de texto en pantallas pequeñas -->
+    <section>
+      <h3>Ejercicio 12: Cambia el tamaño de texto en pantallas pequeñas</h3>
+      <style>
+        /* EJERCICIO 12: Texto más pequeño en pantallas menores a 500px */
+        @media (max-width: 500px) {
+          .container-text-small .item {
+            font-size: 12px;
+          }
+        }
+      </style>
+      <div class="container container-text-small">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 13: Cambiar padding en pantallas grandes -->
+    <section>
+      <h3>Ejercicio 13: Cambia padding en pantallas grandes</h3>
+      <style>
+        /* EJERCICIO 13: Más padding en pantallas mayores a 900px */
+        @media (min-width: 900px) {
+          .container-padding-large {
+            padding: 30px;
+          }
+          .container-padding-large .item {
+            padding: 20px;
+          }
+        }
+      </style>
+      <div class="container container-padding-large">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 14: Cambiar color de texto en pantallas pequeñas -->
+    <section>
+      <h3>Ejercicio 14: Cambia color de texto en pantallas pequeñas</h3>
+      <style>
+        /* EJERCICIO 14: Color de texto diferente en pantallas menores a 600px */
+        @media (max-width: 600px) {
+          .container-text-color-small .item {
+            color: #ff6b6b;
+            background-color: #333;
+          }
+        }
+      </style>
+      <div class="container container-text-color-small">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 15: Cambiar dirección de flex en pantallas medianas -->
+    <section>
+      <h3>Ejercicio 15: Cambia dirección de flex en pantallas medianas</h3>
+      <style>
+        /* EJERCICIO 15: Solo entre 700px y 900px cambiar a columna */
+        @media (min-width: 700px) and (max-width: 900px) {
+          .container-flex-md {
+            flex-direction: column;
+          }
+        }
+      </style>
+      <div class="container container-flex-md">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 16: Cambiar dirección de flex, color de fondo y tamaño de fuente en un rango (min y width) que elijas -->
+    <section>
+      <h3>
+        Ejercicio 16: Cambiar dirección de flex, color de fondo y tamaño de
+        fuente en un rango (min y width) que elijas
+      </h3>
+      <style>
+        /* EJERCICIO 16: Cambios múltiples en rango 600px - 1200px */
+        @media (min-width: 600px) and (max-width: 1200px) {
+          .container-flex-md-rules {
+            flex-direction: column;
+            background-color: #e74c3c;
+          }
+          .container-flex-md-rules .item {
+            font-size: 18px;
+            background-color: #2c3e50;
+          }
+        }
+      </style>
+      <div class="container container-flex-md-rules">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ejercicio 17: Navegación -->
+    <section>
+      <h3>
+        Ejercicio 17: Cambiar la navegación usando flexbox para que los links
+        (a) esten posisionados horizontalmente al final (end).
+        <br />Agregar un color de fondo a la navegación (contenedor navigation)
+        <br />
+        Quitar bullets y subrayado de links usando: <br />list-style: none;
+        text-decoration: none;
+        <br />
+        En mobile: <br />
+        posicionar verticalmente (column)
+
+        <br />
+        Plus: Agregar una pseudo clase (hover) sobre los (a) para cambiar el color de
+        fondo al pasar el mouse por arriba. <a href="https://developer.mozilla.org/es/docs/Web/CSS/:hover">Ver: Hover</a>
+      </h3>
+      <style>
+        /* EJERCICIO 17: Navegación responsive completa */
+        .navigation {
+          display: flex;
+          justify-content: flex-end; /* Links al final horizontalmente */
+          list-style: none; /* Quitar bullets */
+          background-color: #2c3e50; /* Color de fondo */
+          padding: 0;
+          margin: 0;
+        }
+
+        .navigation li {
+          margin: 0;
+        }
+
+        .navigation a {
+          text-decoration: none; /* Quitar subrayado */
+          color: white;
+          padding: 15px 20px;
+          display: block;
+          transition: background-color 0.3s ease;
+        }
+
+        /* Pseudo clase hover para cambiar color al pasar el mouse */
+        .navigation a:hover {
+          background-color: #34495e;
+        }
+
+        /* En mobile: posicionar verticalmente (column) */
+        @media (max-width: 768px) {
+          .navigation {
+            flex-direction: column;
+            justify-content: center;
+          }
+          
+          .navigation a {
+            text-align: center;
+            border-bottom: 1px solid #34495e;
+          }
+          
+          .navigation a:hover {
+            background-color: #1abc9c;
+          }
+        }
+      </style>
+      <nav>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+  </body>
+</html>
