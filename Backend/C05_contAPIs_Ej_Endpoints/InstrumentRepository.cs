@@ -5,13 +5,17 @@ namespace MiPrimerAPI.Repositories
     // Clase que simula un "repositorio" en memoria
     public class InstrumentRepository
     {
-        // Propiedad pública con la lista de instrumentos
-        public List<string> Instruments { get; set; }
+        // Propiedad pública y ESTATICA con la lista de instrumentos
+        public static List<string> Instruments { get; set; }
 
         // Constructor: inicializa la lista con algunos valores por defecto
-        public InstrumentRepository()
+        // Importante que sea estatico lista y elemento para que no se pierdan los datos
+        static InstrumentRepository()
         {
             Instruments = new List<string> { "Guitarra", "Batería", "Piano" };
         }
+
+
+
     }
 }
